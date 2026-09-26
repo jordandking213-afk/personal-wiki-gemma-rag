@@ -1,0 +1,142 @@
+{
+  "started": "2026-09-26T12:41:53",
+  "model": "gemma4:e2b-it-qat",
+  "runtime": "Ollama 0.34.3",
+  "execution": "local",
+  "num_ctx": 8192,
+  "steps": [
+    {
+      "step": "topics",
+      "source": "romans-10-study-notes",
+      "wall_seconds": 16.09,
+      "load_seconds": 0.01,
+      "prompt_tokens": 476,
+      "output_tokens": 424,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.05
+    },
+    {
+      "step": "topics",
+      "source": "romans-12-study-notes",
+      "wall_seconds": 22.0,
+      "load_seconds": 0.02,
+      "prompt_tokens": 995,
+      "output_tokens": 614,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.09
+    },
+    {
+      "step": "topics",
+      "source": "romans-08-study-notes",
+      "wall_seconds": 20.87,
+      "load_seconds": 0.0,
+      "prompt_tokens": 1358,
+      "output_tokens": 601,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.09
+    },
+    {
+      "step": "links",
+      "page": "Reasons for Rejection",
+      "wall_seconds": 7.12,
+      "load_seconds": 0.0,
+      "prompt_tokens": 487,
+      "output_tokens": 176
+    },
+    {
+      "step": "links",
+      "page": "Remedy for Rejection",
+      "wall_seconds": 5.66,
+      "load_seconds": 0.01,
+      "prompt_tokens": 483,
+      "output_tokens": 120
+    },
+    {
+      "step": "links",
+      "page": "Results of Rejection",
+      "wall_seconds": 7.0,
+      "load_seconds": 0.01,
+      "prompt_tokens": 477,
+      "output_tokens": 157
+    },
+    {
+      "step": "links",
+      "page": "Foundation of Dedication",
+      "wall_seconds": 5.65,
+      "load_seconds": 0.01,
+      "prompt_tokens": 477,
+      "output_tokens": 131
+    },
+    {
+      "step": "links",
+      "page": "Honest Self-Evaluation",
+      "wall_seconds": 8.36,
+      "load_seconds": 0.01,
+      "prompt_tokens": 480,
+      "output_tokens": 157
+    },
+    {
+      "step": "links",
+      "page": "Faithful Cooperation",
+      "wall_seconds": 6.59,
+      "load_seconds": 0.01,
+      "prompt_tokens": 477,
+      "output_tokens": 143
+    },
+    {
+      "step": "links",
+      "page": "Loving Participation",
+      "wall_seconds": 6.76,
+      "load_seconds": 0.0,
+      "prompt_tokens": 476,
+      "output_tokens": 140
+    },
+    {
+      "step": "links",
+      "page": "Relationship to Enemies",
+      "wall_seconds": 6.64,
+      "load_seconds": 0.01,
+      "prompt_tokens": 476,
+      "output_tokens": 142
+    },
+    {
+      "step": "links",
+      "page": "Four Spiritual Freedoms",
+      "wall_seconds": 7.43,
+      "load_seconds": 0.02,
+      "prompt_tokens": 478,
+      "output_tokens": 156
+    },
+    {
+      "step": "links",
+      "page": "Suffering and Pain",
+      "wall_seconds": 6.56,
+      "load_seconds": 0.01,
+      "prompt_tokens": 481,
+      "output_tokens": 142
+    },
+    {
+      "step": "links",
+      "page": "God's Perfect Plan",
+      "wall_seconds": 7.06,
+      "load_seconds": 0.02,
+      "prompt_tokens": 478,
+      "output_tokens": 154
+    },
+    {
+      "step": "links",
+      "page": "Hope and Faith",
+      "wall_seconds": 6.79,
+      "load_seconds": 0.01,
+      "prompt_tokens": 476,
+      "output_tokens": 157
+    }
+  ],
+  "total_seconds": 140.8,
+  "pages": 15,
+  "passages_indexed": 18,
+  "memory_after": {
+    "ollama_reported_gb": 1.67,
+    "ollama_processes_rss_gb": 0.14
+  }
+}

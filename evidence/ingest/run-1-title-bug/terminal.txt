@@ -1,0 +1,23 @@
+Ingesting vault/raw with gemma4:e2b-it-qat (local)
+  > Romans 10 Study Notes.md: 3 passages -> asking Gemma for topics
+      topic: Israel S Rejection Reasons
+      topic: Law S True Function
+      topic: Remedy for Rejection
+      topic: Consequences of Rejection
+  > Romans 12 Study Notes.md: 8 passages -> asking Gemma for topics
+      topic: Basis for Dedication
+      topic: Living Sacrifice
+      topic: Mind As Sacrifice
+      topic: Will As Sacrifice
+      topic: Honest Evaluation
+      topic: Faithful Cooperation
+      topic: Loving Participation
+      topic: Relationship to Enemies
+  > Romans 8 Study Notes.md: 7 passages -> asking Gemma for topics
+      topic: Four Spiritual Freedoms
+      topic: Suffering and Groans
+      topic: God S Perfect Plan
+      topic: Faith Hope Love
+  > linking 16 topic notes (Gemma picks related notes)
+  done in 182.6s: 16 topic notes, 3 chapter pages, 18 passages indexed
+  log: data/logs/ingest-20260926-124133.json

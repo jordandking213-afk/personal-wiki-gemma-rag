@@ -1,0 +1,309 @@
+
+[1m==== 1. Internet check (must be OFFLINE) ====[0m
+Sat Sep 26 14:02:42 PDT 2026
+OFFLINE confirmed: https://ollama.com is unreachable.
+route: writing to routing socket: not in table
+
+[1m==== 2. Device and model ====[0m
+ProductName:		macOS
+ProductVersion:		14.3
+BuildVersion:		23D56
+Apple M1
+RAM: 8 GB unified memory
+Free disk: 11Gi
+System-wide memory free percentage: 33%
+]11;?\[6nWarning: could not connect to a running Ollama instance
+Warning: client version is 0.34.3
+Python 3.14.7
+
+[1m==== 3. Restart Ollama (local server only) ====[0m
+
+$ ollama list
+]11;?\[6nNAME                 ID              SIZE      MODIFIED    
+gemma4:e2b-it-qat    07ea59a47401    4.3 GB    2 hours ago    
+gemma3:1b            8648f39daa8f    815 MB    3 days ago     
+
+[1m==== 4. Help ====[0m
+
+$ ./wiki --help
+[1;34musage: [0m[1;35mwiki[0m [[32m-h[0m] [32m<command> ...[0m
+
+Romans Study Wiki: a personal wiki CLI powered by local Gemma (gemma4:e2b-it-qat via Ollama). Runs fully offline once the model is downloaded.
+
+[1;34mpositional arguments:[0m
+  [1;32m<command>[0m
+    [1;32mingest[0m    read raw notes, generate linked wiki pages with Gemma, rebuild
+              the search index
+    [1;32msearch[0m    show matching original passages and source paths (no model call)
+    [1;32mask[0m       standalone, cited answer from the notes (or insufficient
+              evidence)
+    [1;32mchat[0m      talk with the study companion (conversation context, optional
+              notes lookup)
+
+[1;34moptions:[0m
+  [1;32m-h[0m, [1;36m--help[0m  show this help message and exit
+
+modes:
+  search  shows original passages from vault/raw with paths; no answer is generated and
+          the model does not need to be running
+  ask     standalone factual answer from retrieved passages with [S#] citations, or
+          "INSUFFICIENT EVIDENCE"; ignores chat history and personality
+  chat    warm study companion with conversation memory; looks up notes only when needed
+
+examples:
+  ./wiki ingest vault/raw
+  ./wiki search "living sacrifice"
+  ./wiki ask "What are the three groans in Romans 8:18-30?"
+  ./wiki chat
+
+configuration (wiki_cli/config.py):
+  model   gemma4:e2b-it-qat served by Ollama at http://localhost:11434
+  prompts prompts/persona.md (chat), prompts/wiki-instructions.md (ask)
+  data    vault/raw (sources), vault/wiki (pages), data/ (index, manifest), evidence/ (saved runs)
+
+requires: Ollama running (`ollama serve`) with the model pulled (`ollama pull gemma4:e2b-it-qat`)
+for ingest, ask, and chat. search works without it.
+
+[1m==== 5. Ingest (Gemma re-reads every source; reviewed pages are kept, drafts saved) ====[0m
+
+$ ./wiki ingest vault/raw --force
+Ingesting vault/raw with gemma4:e2b-it-qat (local)
+  > Romans 10 Study Notes.md: 3 passages -> asking Gemma for topics (reusing existing titles)
+      source unchanged: reviewed pages kept; Gemma draft saved to data/drafts/romans-10-study-notes-20260926-140311.json
+      topic: Reasons for Rejection (updated in place, no duplicate)
+      topic: Remedy for Rejection (updated in place, no duplicate)
+      topic: Results of Rejection (updated in place, no duplicate)
+  > Romans 12 Study Notes.md: 8 passages -> asking Gemma for topics (reusing existing titles)
+      WARNING: still uncovered: Relationship (to enemies)
+      source unchanged: reviewed pages kept; Gemma draft saved to data/drafts/romans-12-study-notes-20260926-140342.json
+      topic: Four Therefores in Romans (updated in place, no duplicate)
+      topic: Body as Living Sacrifice (updated in place, no duplicate)
+      topic: Mind as Sacrifice (updated in place, no duplicate)
+      topic: Will as Sacrifice (updated in place, no duplicate)
+      topic: Relationships with Believers (updated in place, no duplicate)
+      topic: Relationship to Enemies (updated in place, no duplicate)
+  > Romans 8 Study Notes.md: 7 passages -> asking Gemma for topics (reusing existing titles)
+      source unchanged: reviewed pages kept; Gemma draft saved to data/drafts/romans-08-study-notes-20260926-140411.json
+      topic: Four Spiritual Freedoms (updated in place, no duplicate)
+      topic: Three Groans of Suffering (updated in place, no duplicate)
+      topic: Hope and Assurance (updated in place, no duplicate)
+      topic: God's Perfect Plan (updated in place, no duplicate)
+  done in 85.5s: 13 topic notes, 3 chapter pages, 18 passages indexed
+  log: data/logs/ingest-20260926-140411.json
+
+[1m==== 6. Search mode (no model call) ====[0m
+
+$ ./wiki search living sacrifice
+── search · execution: local · model: none (retrieval only) ──
+
+[1] vault/raw/Romans 12 Study Notes.md  (BM25 7.217)
+    section: Dedication - 3 steps > Your body is a living sacrifice to give to God
+    │ Your body is a living sacrifice to give to God
+    │     - Two living sacrifices in the Bible
+    │         - Isaac (Genesis 22)
+    │             - Would have died in obedience to God, but ram took his place
+    │                 - Still counts, he died to self and willingly yielded to God’s will
+    │         - Jesus Christ (Gospels)
+    │             - Actually died in sacrifice
+
+[2] vault/raw/Romans 12 Study Notes.md  (BM25 2.549)
+    section: Dedication - 3 steps > Your will is a sacrifice to God
+    │ Your will is a sacrifice to God
+    │     - Your mind controls your body, your will controls your mind
+    │     - “Willpower” often fails, yielding our will to God to let His power takeover gives us willpower (and “won’t power”)
+    │         - Surrender happens through disciplined prayer
+    │         - “Not my will, but thy will be done”
+    │     - Pray about EVERYTHING - yield plans of the day to Him
+
+[3] vault/raw/Romans 12 Study Notes.md  (BM25 2.434)
+    section: Dedication - 3 steps > Your mind is a sacrifice to God
+    │ Your mind is a sacrifice to God
+    │     - The world wants to change your mind with external pressure, the Holy Spirit changes your mind by releasing power within
+    │         - If the world is in control, you are a conformer, if God controls your thinking, you are a transformer
+    │         - In spending time meditating on God’s Word, memorization, part of inner spirit, God will make you more spiritual
+
+saved: evidence/search/20260926-140412-living-sacrifice.md
+
+[1m==== 7. Ask-mode tests ====[0m
+
+$ ./wiki ask What are the three groans in Romans 8:18-30?
+── ask · execution: local · model: gemma4:e2b-it-qat ──  (standalone RAG, no chat history)
+retrieved 5 passages: S1=Romans 8 Study Notes#5, S2=Romans 8 Study Notes#4, S3=Romans 8 Study Notes#2, S4=Romans 8 Study Notes#6, S5=Romans 8 Study Notes#3
+
+The three groans mentioned in Romans 8:18-30 are:
+
+1. Creation groans (verses 18-22) [S3].
+2. Holy Spirit groans (verses 23-30) [S1, S4].
+3. Believers groan (verses 23-25) [S5].
+
+Citations:
+  [S1] vault/raw/Romans 8 Study Notes.md — Spirit groans (23-30) > The Spirit groans, but also prays on our behalf - ACTION
+  [S3] vault/raw/Romans 8 Study Notes.md —  free from discouragement > Three groans are mentioned > Creation groans (18-22)
+  [S4] vault/raw/Romans 8 Study Notes.md — t plan (verse 29) for those who love Him and are called according to His purpose
+  [S5] vault/raw/Romans 8 Study Notes.md —  free from discouragement > Three groans are mentioned > Believers groan (23-25)
+Citation check: OK — cites S1, S3, S4, S5, all provided
+Response time: 6.47s (model load 0.01s)
+saved: evidence/ask/20260926-140419-what-are-the-three-groans-in.md
+
+$ ./wiki ask Why couldn't the Jewish law bring Israel to salvation?
+── ask · execution: local · model: gemma4:e2b-it-qat ──  (standalone RAG, no chat history)
+retrieved 2 passages: S1=Romans 10 Study Notes#1, S2=Romans 10 Study Notes#3
+
+The Jewish law could not bring Israel to salvation because it was misunderstood. The notes state that the law "was a signpost, but could not take them to their destination…it only leads the sinner to the savior" [S1]. Furthermore, the law cannot only be outwardly obeyed; it must also be obeyed in the heart [S1].
+
+Citations:
+  [S1] vault/raw/Romans 10 Study Notes.md — Israel rejections — Reasons for their rejection 1-13
+Citation check: OK — cites S1, all provided
+Response time: 3.69s
+saved: evidence/ask/20260926-140423-why-couldn-t-the-jewish-law.md
+
+$ ./wiki ask How does Romans 8:1 fit into the "therefore" passages in Romans, and what does Romans 8 say that freedom looks like?
+── ask · execution: local · model: gemma4:e2b-it-qat ──  (standalone RAG, no chat history)
+retrieved 5 passages: S1=Romans 12 Study Notes#1, S2=Romans 8 Study Notes#1, S3=Romans 8 Study Notes#3, S4=Romans 8 Study Notes#5, S5=Romans 8 Study Notes#4
+
+Romans 8:1 is the "therefore" of assurance [S1]. Romans 8 covers four spiritual freedoms: freedom from judgment (no condemnation) in verses 8:1-4 [S2], freedom from defeat (no obligation because we cannot save ourselves, submit to God) in verses 8:5-17 [S2], freedom from discouragement (no frustration) in verses 8:18-30 [S2], and freedom from separation in verses 8:31-39 [S2].
+
+Citations:
+  [S1] vault/raw/Romans 12 Study Notes.md — Romans 12 has the fourth “therefore” in Romans
+  [S2] vault/raw/Romans 8 Study Notes.md — Commentary Used: Wiersbe commentary — Romans 8 covers four spiritual freedoms:
+Citation check: OK — cites S1, S2, all provided
+Response time: 6.58s
+saved: evidence/ask/20260926-140430-how-does-romans-8-1-fit.md
+
+$ ./wiki ask Who wrote the book of Romans?
+── ask · execution: local · model: gemma4:e2b-it-qat ──  (standalone RAG, no chat history)
+retrieved 5 passages: S1=Romans 12 Study Notes#1, S2=Romans 8 Study Notes#1, S3=Romans 12 Study Notes#7, S4=Romans 8 Study Notes#5, S5=Romans 8 Study Notes#4
+
+INSUFFICIENT EVIDENCE: The provided study notes do not contain information about who wrote the book of Romans.
+
+Citations:
+  (none)
+Citation check: OK — insufficient-evidence response
+Response time: 1.99s
+saved: evidence/ask/20260926-140432-who-wrote-the-book-of-romans.md
+
+[1m==== 8. Chat mode checks (you type these) ====[0m
+Type each line below, one at a time, waiting for each reply:
+  1) what can we do?
+  2) what can you help me with?
+  3) Give me a short 3-step plan for a small group discussion on Romans 12.
+  4) make that shorter
+  5) Just so you know, our study group meets on Tuesdays.
+  6) /exit
+
+$ ./wiki chat
+── chat · execution: local · model: gemma4:e2b-it-qat ──
+Romans Study Companion. Type /help for commands, /exit to quit.
+
+you › what can we do?
+  [no notes lookup (conversational turn or follow-up on the conversation)]
+
+companion › Hello there! I'm here to help you explore the rich truths in Romans 8:18-30, Romans 10, and Romans 12. We can dive into these passages together in so many ways.
+
+For instance, we could:
+
+1.  **Talk through ideas:** We can discuss the themes, ask questions about specific verses, or reflect on how these ideas apply to our lives today.
+2.  **Brainstorm study materials:** If you need help planning a discussion question, drafting a short devotional, or creating an outline for a study session, I can certainly help you brainstorm those ideas.
+3.  **Create a summary:** We could work together to draft a summary of these passages that you could share with a small group.
+
+What sounds most interesting to you right now? We can start anywhere you like! 😊
+
+you › what can you help me with?
+  [no notes lookup (conversational turn or follow-up on the conversation)]
+
+companion › I'm happy to help you with a variety of things related to our study of Romans 8:18-30, Romans 10, and Romans 12!
+
+Here are some specific ways I can assist you:
+
+*   **Discussing Ideas:** We can explore the deeper meaning of the passages, ask clarifying questions about specific verses, or reflect on how these truths might change how you view things.
+*   **Planning Study Tools:** I can help you draft discussion questions, outline a study plan, or even create a short devotional idea based on what we are reading.
+*   **Summarizing:** If you've read a lot, I can help you create a concise summary that you could use to share with a small group.
+*   **Looking Things Up:** If you have a specific question about a verse, I can try to provide a clear answer based on what we are studying.
+
+Just let me know what you feel like focusing on right now, or if you have a specific question in mind! We can take it one step at a time.
+
+you › Give me a short 3-step plan for a small group discussion on Romans 12
+  [looked up notes (message refers to the study)]
+
+companion › That's a wonderful passage to focus on! Romans 12 is rich with instruction about how we should live our lives in response to God's grace.
+
+Here is a short, three-step plan you could use for your small group discussion on Romans 12, drawing from the notes we have:
+
+**Discussion Plan: Living Out Romans 12**
+
+**Step 1: Understanding the Foundation (The "Why")**
+*   **Focus:** Start by looking at the context. Note that Romans 12:1 is the "therefore" of everything else [S2].
+*   **Discussion Question:** How does our understanding of God’s grace (from Romans 3, 5, and 8) change how we should approach how we live our daily lives?
+
+**Step 2: The Practice of Dedication (The "How - Internal")**
+*   **Focus:** Look at Verse 1—"Present your bodies as a living sacrifice" [S1]. This means surrendering our will and mind to God's control [S3].
+*   **Discussion Question:** When we try to live according to God's will, where do we struggle? What is one practical way you can yield your will to God today through prayer?
+
+**Step 3: The Evidence of Love (The "How - External")**
+*   **Focus:** Move from our internal dedication to our external actions, focusing on loving participation with others [S5]. This includes being joyful in hope, patient in affliction, and faithful in prayer [S5].
+*   **Discussion Question:** How does our attitude (honesty, humility) in interacting with other believers show that we are truly living out this dedication?
+
+How does that sound? We can adjust any of those steps if you'd like to focus more on the suffering mentioned in Romans 8, or perhaps on the relationship with others!
+  sources:
+  [S1] vault/raw/Romans 12 Study Notes.md — Dedication - 3 steps > Your body is a living sacrifice to give to God
+  [S2] vault/raw/Romans 12 Study Notes.md — Romans 12 has the fourth “therefore” in Romans
+  [S3] vault/raw/Romans 12 Study Notes.md — Dedication - 3 steps > Your will is a sacrifice to God
+  [S5] vault/raw/Romans 12 Study Notes.md — Relationship (to other believers) > Loving participation
+  [citation check: OK — cites S1, S2, S3, S5, all provided]
+
+you › make that shorter
+  [no notes lookup (conversational turn or follow-up on the conversation)]
+
+companion › I can certainly make that plan more concise for a quicker discussion! Here is a shortened, three-step version:
+
+**Shortened Discussion Plan: Living Out Romans 12**
+
+1.  **The Foundation:** How does knowing God's grace (Romans 3-8) change how we approach our daily lives?
+2.  **The Dedication:** How do we practically surrender our will to God, and what is one way we can yield our control to Him today?
+3.  **The Love:** How does our attitude (joy, patience, faithfulness) toward other believers show that we are truly living out our dedication?
+
+Does this feel more streamlined for what you need?
+
+you › Just so you know, ou  r study group meets on Tuesdays
+  [looked up notes (message refers to the study)]
+
+companion › That's helpful context! Knowing that you meet on Tuesdays gives us a little more time to dig into these deeper themes.
+
+Since we are focusing on Romans 12, and given the notes we have on Romans 8 (which deals heavily with suffering and hope), we could shift our focus toward **how our dedication (Romans 12:1-2)** connects to the **hope and comfort we find in the face of suffering (Romans 8:18-30)**.
+
+Would you like to build a discussion plan around the connection between **"Living as a Sacrifice" (Romans 12)** and **"Finding Hope in Suffering" (Romans 8)**?
+
+For example, we could structure it like this:
+
+1.  **The Command:** What does it mean practically to present our bodies as a living sacrifice? [S1]
+2.  **The Reality:** How does the Bible help us understand the groans and suffering we experience? [S3]
+3.  **The Anchor:** How does the promise of God's work and perfect plan (Romans 8:28-29) give us hope even when we are groaning? [S2]
+
+How does that direction sound for your Tuesday meeting?
+  sources:
+  [S1] vault/raw/Romans 8 Study Notes.md — Spirit groans (23-30) > The Spirit groans, but also prays on our behalf - ACTION
+  [S2] vault/raw/Romans 8 Study Notes.md — t plan (verse 29) for those who love Him and are called according to His purpose
+  [S3] vault/raw/Romans 8 Study Notes.md —  free from discouragement > Three groans are mentioned > Believers groan (23-25)
+  [citation check: OK — cites S1, S2, S3, all provided]
+
+you › /exit
+transcript saved: evidence/chat/20260926-140432-chat-session.md
+
+[1m==== 9. Chat claim is not ask evidence ====[0m
+
+$ ./wiki ask When does the study group meet?
+── ask · execution: local · model: gemma4:e2b-it-qat ──  (standalone RAG, no chat history)
+retrieved 1 passages: S1=Romans 8 Study Notes#6
+
+INSUFFICIENT EVIDENCE: The study notes do not contain this information. The study notes discuss Romans 8:18-30, focusing on suffering, freedom from discouragement, and the work of the Holy Spirit and God's plan.
+
+Citations:
+  (none)
+Citation check: OK — insufficient-evidence response
+Response time: 3.39s (model load 0.01s)
+saved: evidence/ask/20260926-140620-when-does-the-study-group-meet.md
+
+[1m==== 10. Memory after the run ====[0m
+{'ollama_reported_gb': 1.67, 'model_process_footprint_gb': 4.94, 'model_process_peak_gb': 4.97}
+
+Done. Stop the screen recording. Log: evidence/offline-run/terminal-log.txt

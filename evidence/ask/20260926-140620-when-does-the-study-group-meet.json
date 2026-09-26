@@ -1,0 +1,38 @@
+{
+  "mode": "ask",
+  "question": "When does the study group meet?",
+  "model": "gemma4:e2b-it-qat",
+  "runtime": "Ollama 0.34.3",
+  "execution": "local",
+  "num_ctx": 8192,
+  "time": "2026-09-26T14:06:20",
+  "retrieved": [
+    {
+      "id": "Romans 8 Study Notes#6",
+      "source_path": "vault/raw/Romans 8 Study Notes.md",
+      "source_title": "Romans 8 Study Notes",
+      "section": "Romans 8:18-30 discusses suffering and pain, and how we are now free from discouragement > Three groans are mentioned > Holy Spirit groans (23-30) > God is always at work (verse 28) and has a perfect plan (verse 29) for those who love Him and are called according to His purpose",
+      "text": "God is always at work (verse 28) and has a perfect plan (verse 29) for those who love Him and are called according to His purpose\n    - This verse is often taken out of context, “for those who love God” and “for those who are called according to his purpose” is CRITICAL and is sometimes left out when this verse is referenced\n    - Predestination applies only to saved people (??? - Point to be discussed with broader group)\n        - God does not predestined people to be eternally condemned",
+      "score": 1.931
+    }
+  ],
+  "answer": "INSUFFICIENT EVIDENCE: The study notes do not contain this information. The study notes discuss Romans 8:18-30, focusing on suffering, freedom from discouragement, and the work of the Holy Spirit and God's plan.",
+  "citation_check": {
+    "cited": [],
+    "invalid": [],
+    "insufficient": true,
+    "status": "OK — insufficient-evidence response"
+  },
+  "stats": {
+    "wall_seconds": 3.39,
+    "load_seconds": 0.01,
+    "prompt_tokens": 465,
+    "output_tokens": 52,
+    "model_called": true
+  },
+  "memory": {
+    "ollama_reported_gb": 1.67,
+    "model_process_footprint_gb": 4.94,
+    "model_process_peak_gb": 4.97
+  }
+}

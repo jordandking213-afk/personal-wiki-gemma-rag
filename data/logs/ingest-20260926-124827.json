@@ -1,0 +1,169 @@
+{
+  "started": "2026-09-26T12:45:51",
+  "model": "gemma4:e2b-it-qat",
+  "runtime": "Ollama 0.34.3",
+  "execution": "local",
+  "num_ctx": 8192,
+  "steps": [
+    {
+      "step": "topics",
+      "source": "romans-10-study-notes",
+      "wall_seconds": 13.55,
+      "load_seconds": 0.01,
+      "prompt_tokens": 476,
+      "output_tokens": 409,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.06
+    },
+    {
+      "step": "topics",
+      "source": "romans-12-study-notes",
+      "wall_seconds": 23.84,
+      "load_seconds": 0.0,
+      "prompt_tokens": 995,
+      "output_tokens": 765,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.12
+    },
+    {
+      "step": "gap_topics",
+      "source": "romans-12-study-notes",
+      "uncovered": [
+        8
+      ],
+      "wall_seconds": 8.07,
+      "load_seconds": 0.0,
+      "prompt_tokens": 282,
+      "output_tokens": 247
+    },
+    {
+      "step": "topics",
+      "source": "romans-08-study-notes",
+      "wall_seconds": 23.09,
+      "load_seconds": 0.0,
+      "prompt_tokens": 1369,
+      "output_tokens": 730,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.18
+    },
+    {
+      "step": "links",
+      "page": "Reasons for Rejection",
+      "wall_seconds": 6.06,
+      "load_seconds": 0.0,
+      "prompt_tokens": 534,
+      "output_tokens": 149
+    },
+    {
+      "step": "links",
+      "page": "Remedy for Rejection",
+      "wall_seconds": 6.25,
+      "load_seconds": 0.0,
+      "prompt_tokens": 536,
+      "output_tokens": 160
+    },
+    {
+      "step": "links",
+      "page": "Results of Rejection",
+      "wall_seconds": 5.75,
+      "load_seconds": 0.0,
+      "prompt_tokens": 534,
+      "output_tokens": 142
+    },
+    {
+      "step": "links",
+      "page": "Foundation of Dedication",
+      "wall_seconds": 6.04,
+      "load_seconds": 0.0,
+      "prompt_tokens": 549,
+      "output_tokens": 145
+    },
+    {
+      "step": "links",
+      "page": "Living Sacrifice",
+      "wall_seconds": 5.96,
+      "load_seconds": 0.01,
+      "prompt_tokens": 532,
+      "output_tokens": 144
+    },
+    {
+      "step": "links",
+      "page": "Mind as Sacrifice",
+      "wall_seconds": 6.9,
+      "load_seconds": 0.0,
+      "prompt_tokens": 534,
+      "output_tokens": 181
+    },
+    {
+      "step": "links",
+      "page": "Will as Sacrifice",
+      "wall_seconds": 7.03,
+      "load_seconds": 0.0,
+      "prompt_tokens": 533,
+      "output_tokens": 175
+    },
+    {
+      "step": "links",
+      "page": "Relationship to Others",
+      "wall_seconds": 4.67,
+      "load_seconds": 0.0,
+      "prompt_tokens": 539,
+      "output_tokens": 102
+    },
+    {
+      "step": "links",
+      "page": "Love in Dealing with Enemies",
+      "wall_seconds": 6.13,
+      "load_seconds": 0.0,
+      "prompt_tokens": 535,
+      "output_tokens": 140
+    },
+    {
+      "step": "links",
+      "page": "Viewing Revenge and Justice",
+      "wall_seconds": 6.6,
+      "load_seconds": 0.0,
+      "prompt_tokens": 542,
+      "output_tokens": 146
+    },
+    {
+      "step": "links",
+      "page": "Four Spiritual Freedoms",
+      "wall_seconds": 4.5,
+      "load_seconds": 0.02,
+      "prompt_tokens": 535,
+      "output_tokens": 88
+    },
+    {
+      "step": "links",
+      "page": "Suffering and Groans",
+      "wall_seconds": 7.37,
+      "load_seconds": 0.01,
+      "prompt_tokens": 538,
+      "output_tokens": 175
+    },
+    {
+      "step": "links",
+      "page": "Hope and Assurance",
+      "wall_seconds": 6.8,
+      "load_seconds": 0.01,
+      "prompt_tokens": 533,
+      "output_tokens": 167
+    },
+    {
+      "step": "links",
+      "page": "God's Sovereignty",
+      "wall_seconds": 7.27,
+      "load_seconds": 0.0,
+      "prompt_tokens": 535,
+      "output_tokens": 182
+    }
+  ],
+  "total_seconds": 156.0,
+  "pages": 17,
+  "passages_indexed": 18,
+  "memory_after": {
+    "ollama_reported_gb": 1.67,
+    "ollama_processes_rss_gb": 0.16
+  }
+}

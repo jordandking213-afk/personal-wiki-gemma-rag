@@ -1,0 +1,43 @@
+Romans 12 has the fourth “therefore” in Romans
+- Romans 3:20 is the “therefore” of condemnation - the whole world is guilty before God
+- Romans 5:1 is the “therefore” of justification
+- Romans 8:1 is the “therefore” of assurance
+- Romans 12:1 is the “therefore” of dedication
+    - The basis for the other relationships that the author discussed in this section
+Dedication - 3 steps
+- Your body is a living sacrifice to give to God
+    - Two living sacrifices in the Bible
+        - Isaac (Genesis 22)
+            - Would have died in obedience to God, but ram took his place
+                - Still counts, he died to self and willingly yielded to God’s will
+        - Jesus Christ (Gospels)
+            - Actually died in sacrifice 
+- Your mind is a sacrifice to God
+    - The world wants to change your mind with external pressure, the Holy Spirit changes your mind by releasing power within
+        - If the world is in control, you are a conformer, if God controls your thinking, you are a transformer
+        - In spending time meditating on God’s Word, memorization, part of inner spirit, God will make you more spiritual 
+- Your will is a sacrifice to God
+    - Your mind controls your body, your will controls your mind
+    - “Willpower” often fails, yielding our will to God to let His power takeover gives us willpower (and “won’t power”)
+        - Surrender happens through disciplined prayer
+        - “Not my will, but thy will be done”
+    - Pray about EVERYTHING - yield plans of the day to Him
+Relationship (to other believers)
+- Honest evaluation
+    - Each Christian must identify the spiritual gifts and ministry (or ministries) one is called to, ideally in a local church
+    - Be honest (do not under or over evaluate oneself)
+        - Both are examples of pride
+- Faithful cooperation
+    - Even if you don’t like others or “don’t get along” - work with them
+    - No one gift is better or greater than others
+    - Gifts are tools to build with, not toys to play with or weapons to fight with
+- Loving participation
+    - Attitude matters
+    - Love is the circulatory system of the spiritual body
+        - Have it be an honest love, not hypocritical love, humble and not proud
+        - Romans 12:12 - Be JOYFUL in hope, PATIENT in affliction, and FAITHFUL in prayer
+        - Share the burdens of others
+Relationship (to enemies)
+- To return good in exchange for the evil we are met with, it requires love
+    - There is a difference in having enemies because we are inpatient and lack love versus following Christ
+- How do we view revenge? Do we position ourselves as better / less deserving of “justice” than others? Do we view justice as love?

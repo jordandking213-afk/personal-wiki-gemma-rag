@@ -1,0 +1,64 @@
+{
+  "started": "2026-09-26T13:02:23",
+  "model": "gemma4:e2b-it-qat",
+  "runtime": "Ollama 0.34.3",
+  "execution": "local",
+  "num_ctx": 8192,
+  "steps": [
+    {
+      "step": "topics",
+      "source": "romans-10-study-notes",
+      "wall_seconds": 37.08,
+      "load_seconds": 19.39,
+      "prompt_tokens": 459,
+      "output_tokens": 454,
+      "ollama_reported_gb": 1.67,
+      "model_process_footprint_gb": 4.7,
+      "model_process_peak_gb": 4.73
+    },
+    {
+      "step": "topics",
+      "source": "romans-12-study-notes",
+      "wall_seconds": 31.89,
+      "load_seconds": 0.01,
+      "prompt_tokens": 958,
+      "output_tokens": 801,
+      "ollama_reported_gb": 1.67,
+      "model_process_footprint_gb": 4.73,
+      "model_process_peak_gb": 4.78
+    },
+    {
+      "step": "coverage_warning",
+      "source": "romans-12-study-notes",
+      "uncovered": [
+        8
+      ]
+    },
+    {
+      "step": "topics",
+      "source": "romans-08-study-notes",
+      "wall_seconds": 28.91,
+      "load_seconds": 0.02,
+      "prompt_tokens": 1294,
+      "output_tokens": 715,
+      "ollama_reported_gb": 1.67,
+      "model_process_footprint_gb": 4.76,
+      "model_process_peak_gb": 4.79
+    },
+    {
+      "step": "coverage_warning",
+      "source": "romans-08-study-notes",
+      "uncovered": [
+        4
+      ]
+    }
+  ],
+  "total_seconds": 98.4,
+  "pages": 16,
+  "passages_indexed": 18,
+  "memory_after": {
+    "ollama_reported_gb": 1.67,
+    "model_process_footprint_gb": 4.76,
+    "model_process_peak_gb": 4.79
+  }
+}

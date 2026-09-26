@@ -1,0 +1,174 @@
+{
+  "started": "2026-09-26T12:38:31",
+  "model": "gemma4:e2b-it-qat",
+  "runtime": "Ollama 0.34.3",
+  "execution": "local",
+  "num_ctx": 8192,
+  "steps": [
+    {
+      "step": "topics",
+      "source": "romans-10-study-notes",
+      "wall_seconds": 19.19,
+      "load_seconds": 0.02,
+      "prompt_tokens": 476,
+      "output_tokens": 502,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.06
+    },
+    {
+      "step": "topics",
+      "source": "romans-12-study-notes",
+      "wall_seconds": 38.17,
+      "load_seconds": 0.02,
+      "prompt_tokens": 1001,
+      "output_tokens": 1057,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.08
+    },
+    {
+      "step": "topics",
+      "source": "romans-08-study-notes",
+      "wall_seconds": 24.24,
+      "load_seconds": 0.02,
+      "prompt_tokens": 1373,
+      "output_tokens": 658,
+      "ollama_reported_gb": 1.67,
+      "ollama_processes_rss_gb": 0.09
+    },
+    {
+      "step": "links",
+      "page": "Israel S Rejection Reasons",
+      "wall_seconds": 6.69,
+      "load_seconds": 0.0,
+      "prompt_tokens": 594,
+      "output_tokens": 170
+    },
+    {
+      "step": "links",
+      "page": "Law S True Function",
+      "wall_seconds": 6.28,
+      "load_seconds": 0.0,
+      "prompt_tokens": 593,
+      "output_tokens": 151
+    },
+    {
+      "step": "links",
+      "page": "Remedy for Rejection",
+      "wall_seconds": 5.9,
+      "load_seconds": 0.0,
+      "prompt_tokens": 595,
+      "output_tokens": 139
+    },
+    {
+      "step": "links",
+      "page": "Consequences of Rejection",
+      "wall_seconds": 6.78,
+      "load_seconds": 0.0,
+      "prompt_tokens": 595,
+      "output_tokens": 168
+    },
+    {
+      "step": "links",
+      "page": "Basis for Dedication",
+      "wall_seconds": 6.63,
+      "load_seconds": 0.0,
+      "prompt_tokens": 599,
+      "output_tokens": 157
+    },
+    {
+      "step": "links",
+      "page": "Living Sacrifice",
+      "wall_seconds": 6.94,
+      "load_seconds": 0.0,
+      "prompt_tokens": 591,
+      "output_tokens": 155
+    },
+    {
+      "step": "links",
+      "page": "Mind As Sacrifice",
+      "wall_seconds": 6.73,
+      "load_seconds": 0.0,
+      "prompt_tokens": 592,
+      "output_tokens": 163
+    },
+    {
+      "step": "links",
+      "page": "Will As Sacrifice",
+      "wall_seconds": 5.63,
+      "load_seconds": 0.01,
+      "prompt_tokens": 592,
+      "output_tokens": 132
+    },
+    {
+      "step": "links",
+      "page": "Honest Evaluation",
+      "wall_seconds": 6.16,
+      "load_seconds": 0.0,
+      "prompt_tokens": 593,
+      "output_tokens": 150
+    },
+    {
+      "step": "links",
+      "page": "Faithful Cooperation",
+      "wall_seconds": 6.2,
+      "load_seconds": 0.0,
+      "prompt_tokens": 593,
+      "output_tokens": 150
+    },
+    {
+      "step": "links",
+      "page": "Loving Participation",
+      "wall_seconds": 6.02,
+      "load_seconds": 0.0,
+      "prompt_tokens": 591,
+      "output_tokens": 143
+    },
+    {
+      "step": "links",
+      "page": "Relationship to Enemies",
+      "wall_seconds": 6.21,
+      "load_seconds": 0.0,
+      "prompt_tokens": 592,
+      "output_tokens": 149
+    },
+    {
+      "step": "links",
+      "page": "Four Spiritual Freedoms",
+      "wall_seconds": 5.86,
+      "load_seconds": 0.0,
+      "prompt_tokens": 594,
+      "output_tokens": 141
+    },
+    {
+      "step": "links",
+      "page": "Suffering and Groans",
+      "wall_seconds": 6.37,
+      "load_seconds": 0.0,
+      "prompt_tokens": 595,
+      "output_tokens": 157
+    },
+    {
+      "step": "links",
+      "page": "God S Perfect Plan",
+      "wall_seconds": 6.15,
+      "load_seconds": 0.0,
+      "prompt_tokens": 593,
+      "output_tokens": 153
+    },
+    {
+      "step": "links",
+      "page": "Faith Hope Love",
+      "wall_seconds": 6.33,
+      "load_seconds": 0.0,
+      "prompt_tokens": 594,
+      "output_tokens": 157
+    }
+  ],
+  "total_seconds": 182.6,
+  "pages": 19,
+  "passages_indexed": 18,
+  "memory_after": {
+    "ollama_reported_gb": 1.67,
+    "ollama_processes_rss_gb": 0.17
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "mode": "ask",
+  "question": "What are the three groans in Romans 8:18-30?",
+  "model": "gemma4:e2b-it-qat",
+  "runtime": "Ollama 0.34.3",
+  "execution": "local",
+  "num_ctx": 8192,
+  "time": "2026-09-26T13:04:09",
+  "retrieved": [
+    {
+      "id": "Romans 8 Study Notes#5",
+      "source_path": "vault/raw/Romans 8 Study Notes.md",
+      "source_title": "Romans 8 Study Notes",
+      "section": "Romans 8:18-30 discusses suffering and pain, and how we are now free from discouragement > Three groans are mentioned > Holy Spirit groans (23-30) > The Spirit groans, but also prays on our behalf - ACTION",
+      "text": "The Spirit groans, but also prays on our behalf - ACTION\n    - We do not know God’s will or what to pray for, but the Spirit intercedes for us to “share the burden”. We are not only called to suffer with with Him, He shares our burden",
+      "score": 7.773
+    },
+    {
+      "id": "Romans 8 Study Notes#4",
+      "source_path": "vault/raw/Romans 8 Study Notes.md",
+      "source_title": "Romans 8 Study Notes",
+      "section": "Romans 8:18-30 discusses suffering and pain, and how we are now free from discouragement > Three groans are mentioned > Holy Spirit groans (23-30) > Jesus groaned when He saw what sin did to mankind (Mark 7:34, John 11:33, 38)",
+      "text": "Jesus groaned when He saw what sin did to mankind (Mark 7:34, John 11:33, 38)",
+      "score": 7.1
+    },
+    {
+      "id": "Romans 8 Study Notes#2",
+      "source_path": "vault/raw/Romans 8 Study Notes.md",
+      "source_title": "Romans 8 Study Notes",
+      "section": "Romans 8:18-30 discusses suffering and pain, and how we are now free from discouragement > Three groans are mentioned > Creation groans (18-22)",
+      "text": "Creation groans (18-22)\n    - Suffering is a result of Adam’s sin, but it is not useless\n    - The groans are compared to a woman in labor, pain now, but something beautiful is the result and the pain ends. It is worth it\n        - Verse 22\n    - Embrace today’s sufferings to build up to tomorrow\n        - Example: Physical fitness\n            - You BREAK down your body (often it is willingly) and embrace pain to be BUILT back up STRONGER\n    - EVERYONE suffers\n        - But not everyone has the same solution, and not all solutions are equal",
+      "score": 6.521
+    },
+    {
+      "id": "Romans 8 Study Notes#6",
+      "source_path": "vault/raw/Romans 8 Study Notes.md",
+      "source_title": "Romans 8 Study Notes",
+      "section": "Romans 8:18-30 discusses suffering and pain, and how we are now free from discouragement > Three groans are mentioned > Holy Spirit groans (23-30) > God is always at work (verse 28) and has a perfect plan (verse 29) for those who love Him and are called according to His purpose",
+      "text": "God is always at work (verse 28) and has a perfect plan (verse 29) for those who love Him and are called according to His purpose\n    - This verse is often taken out of context, “for those who love God” and “for those who are called according to his purpose” is CRITICAL and is sometimes left out when this verse is referenced\n    - Predestination applies only to saved people (??? - Point to be discussed with broader group)\n        - God does not predestined people to be eternally condemned",
+      "score": 5.538
+    },
+    {
+      "id": "Romans 8 Study Notes#3",
+      "source_path": "vault/raw/Romans 8 Study Notes.md",
+      "source_title": "Romans 8 Study Notes",
+      "section": "Romans 8:18-30 discusses suffering and pain, and how we are now free from discouragement > Three groans are mentioned > Believers groan (23-25)",
+      "text": "Believers groan (23-25)\n    - We have a taste of glory to come, but anxious to get there\n    - Adoption = redemption of body when Jesus comes back\n        - There is a “climax” to adoption. The adoption begins when we are saved, the conversion when “the Spirit of adoption” comes and we receive the Holy Spirit. The “climax” is likened to the Rapture when we are called up and receive our glorified bodies\n            - Example: When we are first saved, it is like an agreement to be adopted. The rapture and “climax” is when the child actually moving into the home\n    - We as Believers still have hope as we know the climax of that adoption is coming",
+      "score": 5.532
+    }
+  ],
+  "answer": "The three groans mentioned in Romans 8:18-30 are:\n\n1. Creation groans (verses 18-22) [S3].\n2. Holy Spirit groans (verses 23-30) [S1, S4].\n3. Believers groan (verses 23-25) [S5].",
+  "citation_check": {
+    "cited": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "invalid": [],
+    "insufficient": false,
+    "status": "OK — cites S1, S3, S4, S5, all provided"
+  },
+  "stats": {
+    "wall_seconds": 7.0,
+    "load_seconds": 0.02,
+    "prompt_tokens": 1133,
+    "output_tokens": 79,
+    "model_called": true
+  },
+  "memory": {
+    "ollama_reported_gb": 1.67,
+    "model_process_footprint_gb": 4.79,
+    "model_process_peak_gb": 4.79
+  }
+}

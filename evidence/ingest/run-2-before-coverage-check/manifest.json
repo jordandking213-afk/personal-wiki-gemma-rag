@@ -1,0 +1,47 @@
+{
+  "romans-10-study-notes": {
+    "raw_path": "raw/Romans 10 Study Notes.md",
+    "raw_title": "Romans 10 Study Notes",
+    "original_file": "Romans 10.docx",
+    "sha256": "e1f7ea263bc584c39b6d9b9807d8cfd82f27be1fa0161e1cdb63ae1661eeba08",
+    "chapter": "Romans 10 Overview",
+    "overview": "This study note examines the reasons for Israel's rejection and the resulting consequences, while also exploring the remedy for that rejection and the broader message shared with the Gentiles.",
+    "topics": [
+      "Reasons for Rejection",
+      "Remedy for Rejection",
+      "Results of Rejection"
+    ],
+    "ingested_at": "2026-09-26T12:42:10"
+  },
+  "romans-12-study-notes": {
+    "raw_path": "raw/Romans 12 Study Notes.md",
+    "raw_title": "Romans 12 Study Notes",
+    "original_file": "Romans 12.docx",
+    "sha256": "89f7bbac88cfa08e2b7d016405961535382a3d5631a816dab462a54f1e5e00c2",
+    "chapter": "Romans 12 Overview",
+    "overview": "This study note explores the practical application of Romans 12, focusing on dedication, the nature of the living sacrifice, and the required attitudes for relationships with others and enemies.",
+    "topics": [
+      "Foundation of Dedication",
+      "Honest Self-Evaluation",
+      "Faithful Cooperation",
+      "Loving Participation",
+      "Relationship to Enemies"
+    ],
+    "ingested_at": "2026-09-26T12:42:32"
+  },
+  "romans-08-study-notes": {
+    "raw_path": "raw/Romans 8 Study Notes.md",
+    "raw_title": "Romans 8 Study Notes",
+    "original_file": "Romans 8_18 - 30.docx",
+    "sha256": "94e992e4fc58fe42c2406ed56716cc230bdb04ec9a23b30105c1d25408b4a946",
+    "chapter": "Romans 8 Overview",
+    "overview": "This study note explores the four spiritual freedoms found in Romans 8, focusing heavily on the theme of freedom from discouragement amidst suffering. It details the groans of creation, believers, and the Holy Spirit, while emphasizing God's perfect plan and the assurance of future glory.",
+    "topics": [
+      "Four Spiritual Freedoms",
+      "Suffering and Pain",
+      "God's Perfect Plan",
+      "Hope and Faith"
+    ],
+    "ingested_at": "2026-09-26T12:42:53"
+  }
+}

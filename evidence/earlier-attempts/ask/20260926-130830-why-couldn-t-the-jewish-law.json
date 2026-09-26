@@ -1,0 +1,48 @@
+{
+  "mode": "ask",
+  "question": "Why couldn't the Jewish law bring Israel to salvation?",
+  "model": "gemma4:e2b-it-qat",
+  "runtime": "Ollama 0.34.3",
+  "execution": "local",
+  "num_ctx": 8192,
+  "time": "2026-09-26T13:08:30",
+  "retrieved": [
+    {
+      "id": "Romans 10 Study Notes#1",
+      "source_path": "vault/raw/Romans 10 Study Notes.md",
+      "source_title": "Romans 10 Study Notes",
+      "section": "Israel rejections — Reasons for their rejection 1-13",
+      "text": "Israel rejections\nReasons for their rejection 1-13\n    - Did not feel need for salvation\n        - Thought they were fine, save themselves\n    - Zealous for God\n        - Made own traditions and worshipped them\n    - Proud and self righteous\n        - Refused to listen and learn\n    - Misunderstood their own law\n        - “Law was a signpost, but could not take them to their destination…it only leads the sinner to the savior”\n        - The law cannot only be outwardly obeyed, has to be obeyed in the heart as well\n        - Is there a difference between obeying the Lord and calling on the Lord?",
+      "score": 9.052
+    },
+    {
+      "id": "Romans 10 Study Notes#3",
+      "source_path": "vault/raw/Romans 10 Study Notes.md",
+      "source_title": "Romans 10 Study Notes",
+      "section": "Results of their rejection 18-21",
+      "text": "Results of their rejection 18-21\n    - Israel is guilty\n        - Israel DID hear\n    - Message is shared with Gentiles due to Israel rejection\n    - God still yearns for His people",
+      "score": 3.85
+    }
+  ],
+  "answer": "The Jewish law could not bring Israel to salvation because it was misunderstood. The notes state that the law \"was a signpost, but could not take them to their destination…it only leads the sinner to the savior\" [S1]. Furthermore, the law cannot only be outwardly obeyed; it must also be obeyed in the heart, and there is a difference between obeying the Lord and calling on the Lord [S1].",
+  "citation_check": {
+    "cited": [
+      1
+    ],
+    "invalid": [],
+    "insufficient": false,
+    "status": "OK — cites S1, all provided"
+  },
+  "stats": {
+    "wall_seconds": 4.29,
+    "load_seconds": 0.0,
+    "prompt_tokens": 504,
+    "output_tokens": 86,
+    "model_called": true
+  },
+  "memory": {
+    "ollama_reported_gb": 1.83,
+    "model_process_footprint_gb": 4.85,
+    "model_process_peak_gb": 4.85
+  }
+}
